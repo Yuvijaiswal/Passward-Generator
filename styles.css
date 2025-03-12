@@ -1,0 +1,108 @@
+/* Apply a smooth animation to the entire body */
+body {
+    font-family: Arial, sans-serif;  /* Sets the default font */
+    background: linear-gradient(135deg, #f4f4f4, #dcdcdc); /* Gradient background */
+    text-align: center; /* Centers all text */
+    margin: 50px; /* Adds space around the content */
+    animation: fadeIn 1s ease-in; /* Fade-in effect on page load */
+}
+
+/* Container holding all UI elements */
+.container {
+    background: white;  /* White background for contrast */
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for a floating effect */
+    width: 350px; /* Slightly increased width */
+    margin: auto;
+    border-radius: 12px; /* Smooth rounded corners */
+    animation: slideIn 1s ease-in-out; /* Slide-in animation on page load */
+    transition: transform 0.3s ease-in-out; /* Smooth effect when hovering */
+}
+
+/* Hover effect for the container */
+.container:hover {
+    transform: scale(1.03); /* Slightly enlarge when hovered */
+}
+
+/* Styling for the heading */
+h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Input fields and dropdown menu */
+input, select {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Focus effect on input fields */
+input:focus, select:focus {
+    border-color: #28a745; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    outline: none;
+}
+
+/* Styling for buttons */
+button {
+    width: 95%;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s; /* Smooth button effect */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background: #218838;
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Active (clicked) effect on button */
+button:active {
+    transform: scale(0.98); /* Shrinks a bit when clicked */
+}
+
+/* Password strength message */
+#strength {
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Weak password - Red color */
+#strength.weak {
+    color: red;
+}
+
+/* Medium password - Orange color */
+#strength.medium {
+    color: orange;
+}
+
+/* Strong password - Green color */
+#strength.strong {
+    color: green;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
